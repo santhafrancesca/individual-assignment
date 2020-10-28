@@ -1,0 +1,115 @@
+<html>
+<meta name="viewport" content="width=device-width/1.5, initial-scale=0.5">
+  <head>
+    <title>Selamat Hari Raya</title>
+	  <style>
+.aligncenter {
+    text-align: center;
+}
+p.a {
+  font-style: italic;
+  font-size: xx-large;
+  text-shadow: 2px 2px 5px red;
+  font-weight: bold;
+}
+#textboxid {
+    border-radius: 25px;
+    border: 2px solid #609;
+    padding: 20px; 
+    width: 350px;
+    height: 15px;    
+}
+		  body {background-image: 
+         url("raya.jpg");
+         background-repeat:repeat; }
+</style>
+</head>
+<body>
+	<script>loadname();</script>
+	<p class="aligncenter">
+	<img src="wishingyou.gif" alt="wishing you" align="middle" style="max-width:100%;height:auto;">	
+    </p>
+        <marquee>
+            <p class="a">Wait for it</p>
+	<p class="aligncenter">
+        <img src="103.jpg" alt="happy" align="middle" style="max-width:45%;height:auto;">
+    </p> 
+        </marquee>
+     <p class="aligncenter">
+            <img src="hr.gif" alt="GongXi GongXi" align="middle" style="max-width:100%;height:auto;">
+              </p>
+              <p class="aligncenter">
+                <style>#textboxid
+        {
+            height:68px;
+            font-size:28pt;
+        }
+                </style>
+                <font size=6 color=black><b>Send E-card: </b></font> <input onfocus="if(this.value == 'Enter your name') { this.value = ''; }" type="text" id="textboxid" name="myname" value="Enter your name">
+            <img onclick="sendtowhatsapp();" src="whatsapp.png" alt="firecrackers" align="middle" style="max-width:80%;height:auto;">	
+            </p>
+              <p class="alignright"><font color=black>* Created by Santha Francesca</font></p>
+              
+              <script>
+function testjs()
+{
+	var firsttext = getUrlVars()["name"];
+	var editedname = firsttext.replace("~", "%20");
+	var editedname2 = editedname.replace("~", "%20");
+	var editedname3 = editedname2.replace("~", "%20");
+	var editedname4 = editedname3.replace("~", "%20");
+	window.location = 'http://dcs5604.com/cny20201.html?text='+editedname4;
+
+}
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+function getmytext() {
+	var mytext = getUrlVars()["text"];
+	alert(mytext);
+}
+
+function sendtowhatsapp()
+{
+var mytext = getUrlVars()["text"];
+	var inputVal = document.getElementById("textboxid").value;
+	var outputVal = inputVal.replace(" ", "~");
+	var outputVal2 = outputVal.replace(" ", "~");
+	var outputVal3 = outputVal2.replace(" ", "~");
+	var outputVal4 = outputVal3.replace(" ", "~");
+window.location = 'http://wa.me/?text='+inputVal+' wishing you a Happy Chinese New Year 2020 %0A%0AOpen this ðŸ‘‡ %0A%0Adcs5604.com/cny2020.html?name='+outputVal4;
+}
+
+function loadname() {
+	var mytext = getUrlVars()["text"];
+	var mytext2 = mytext.replace("%20", "&nbsp");
+	var mytext3 = mytext2.replace("%20", "&nbsp");
+	var mytext4 = mytext3.replace("%20", "&nbsp");
+	var mytext5 = mytext4.replace("%20", "&nbsp");
+	document.write("<p class='aligncenter'><b><font size='600' face='verdana' color='yellow'> " + mytext5.big() + "</font></b></p>");
+}
+
+function requestFullScreen(element) {
+    // Supports most browsers and their versions.
+    var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullScreen;
+
+    if (requestMethod) { // Native full screen.
+        requestMethod.call(element);
+    } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
+        var wscript = new ActiveXObject("WScript.Shell");
+        if (wscript !== null) {
+            wscript.SendKeys("{F11}");
+        }
+    }
+}
+
+
+            </script>
+            </body>
+</html>
